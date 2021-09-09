@@ -6,3 +6,22 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+
+body {
+  background-image: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+  font-family: "Quicksand", sans-serif;
+}
+
+h1,
+h2 {
+  color: #ffffff;
+}
+
+section {
+  background-color: #ffffff;
+  margin: 30%;
+}
+
+img {
+  width: 20%;
+}
