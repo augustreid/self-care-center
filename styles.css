@@ -11,6 +11,10 @@ body {
   background-image: linear-gradient(#134d71, #78a7c6, #f7e4bf);
   font-family: "Quicksand", sans-serif;
   text-align: center;
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 h1,
@@ -18,15 +22,20 @@ h2 {
   color: #ffffff;
 }
 
+main {
+  margin: 10%;
+}
+
 section {
   background-color: #ffffff;
   border-radius: 10px;
-  margin: 15%;
-  padding: 3%;
+  margin: 12%;
+  padding: 1%
 }
 
 img {
   width: 12%;
+  padding: 5%;
 }
 
 button {
@@ -34,9 +43,15 @@ button {
   color: #ffffff;
   background-color: #134d71;
   border-radius: 5px;
+  margin-top: 4%;
 }
 
 .choose-message {
-  width: 35%;
+  width: 50%;
   margin: auto;
+}
+
+form {
+  display: flex;
+  justify-content: space-around;
 }
