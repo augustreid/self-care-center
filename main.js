@@ -1,15 +1,24 @@
 //query selectors
-
-
+var messageButton = document.querySelector(".receive-message");
+var image = document.querySelector("img");
 
 
 // event listeners
+messageButton.addEventListener("click", showMessage);
 
 
 
 
 // functions
+function showMessage() {
+  image.classList.add("hidden");
+}
 
+
+
+function getRandomIndex(messageType) {
+  return Math.floor(Math.random() * messageType.length);
+};
 
 
 
