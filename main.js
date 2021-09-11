@@ -4,14 +4,33 @@ var image = document.querySelector("img");
 var messageBox = document.querySelector("p");
 var affRadio = document.getElementById("affirmation");
 var mantraRadio = document.getElementById("mantra");
+var submitButton = document.querySelector("#submit");
+var userName = document.querySelector("#name");
+var greeting = document.querySelector("h2");
+var loginForm = document.querySelector("#login");
+var mainPage = document.querySelector("main");
 
 // event listeners
 messageButton.addEventListener("click", showMessage);
+submitButton.addEventListener("click", showMain);
 
 
 
 
 // functions
+function showMain() {
+  event.preventDefault();
+  if (!userName.value) {
+    window.alert("What should we call you?")
+  } else {
+  mainPage.classList.remove("hidden");
+  loginForm.classList.add("hidden");
+  greeting.innerText = `Welcome, ${userName.value}! Are you ready for inner peace?`;
+  }
+}
+
+
+
 function showMessage() {
   image.classList.add("hidden");
   messageBox.classList.remove("hidden");
