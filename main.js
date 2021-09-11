@@ -9,11 +9,12 @@ var userName = document.querySelector("#name");
 var greeting = document.querySelector("h2");
 var loginForm = document.querySelector("#login");
 var mainPage = document.querySelector("main");
+var clearButton = document.querySelector("#clear");
 
 // event listeners
 messageButton.addEventListener("click", showMessage);
 submitButton.addEventListener("click", showMain);
-
+clearButton.addEventListener("click", clearMessage);
 
 
 
@@ -21,31 +22,44 @@ submitButton.addEventListener("click", showMain);
 function showMain() {
   event.preventDefault();
   if (!userName.value) {
-    window.alert("What should we call you?")
+    window.alert("What should we call you?");
   } else {
-  mainPage.classList.remove("hidden");
-  loginForm.classList.add("hidden");
-  greeting.innerText = `Welcome, ${userName.value}! Are you ready for inner peace?`;
-  }
-}
-
+    hideLogin();
+    greeting.innerText = `Welcome, ${userName.value}! Are you ready for some inner peace?`;
+  };
+};
 
 
 function showMessage() {
-  image.classList.add("hidden");
-  messageBox.classList.remove("hidden");
+  displayText();
   if (affRadio.checked) {
     var randomAffirmation = affirmations[Math.floor(Math.random() * affirmations.length)];
       messageBox.innerText = randomAffirmation;
   }  else if (mantraRadio.checked) {
-      var randomMantra = mantras[Math.floor(Math.random() * mantras.length)];
+    var randomMantra = mantras[Math.floor(Math.random() * mantras.length)];
         messageBox.innerText = randomMantra;
-        messageBox.classList.remove("hidden");
     } else {
       messageBox.innerText = "Please choose a message type!";
     };
 };
 
+
+function hideLogin() {
+  mainPage.classList.remove("hidden");
+  loginForm.classList.add("hidden");
+};
+
+function displayText() {
+  image.classList.add("hidden");
+  messageBox.classList.remove("hidden");
+  clearButton.classList.remove("hidden");
+};
+
+function clearMessage() {
+  messageBox.classList.add("hidden");
+  clearButton.classList.add("hidden");
+  image.classList.remove("hidden");
+};
 
 
 //messages
