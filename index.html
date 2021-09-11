@@ -1,32 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <h1>&#10024; Self Care Center &#10024;</h1>
 
-    <main>
-      <h2> What type of message? </h2>
-      <section class="choose-message">
-        <form>
-          <div class="aff-radio">
-            <input type="radio" id="affirmation" name="message" value="affirmation"> affirmation </input>
-          </div>
-          <div class="mantra-radio">
-            <input type="radio" id="mantra" name="message" value="mantra"> mantra </input>
-          </div>
-        </form>
-        <button class="receive-message"> receive message </button>
-      </section>
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+</head>
 
-      <section class="display">
-        <p class="hidden"> message text </p>
-        <img src="assets/meditate.svg" alt="meditating person">
-      </section>
-    </main>
+<body>
+  <h1>&#10024; Self Care Center &#10024;</h1>
+  <form id="login">
+    <input id="name" placeholder="Enter Your Name">
+    <button type="submit" id="submit"> Teach Me Serenity </button>
+  </form>
 
-    <script type="text/javascript" src="main.js"></script>
-  </body>
+  <main class="hidden">
+    <h2> Greeting goes here </h2>
+    <h3> What type of message would you like? </h3>
+    <section class="choose-message">
+      <form>
+        <div class="aff-radio">
+          <input type="radio" id="affirmation" name="message" value="affirmation"> affirmation </input>
+        </div>
+        <div class="mantra-radio">
+          <input type="radio" id="mantra" name="message" value="mantra"> mantra </input>
+        </div>
+      </form>
+      <button class="receive-message"> Receive Message </button>
+    </section>
+
+    <section class="display">
+      <p class="hidden"> message text </p>
+      <img src="assets/meditate.svg" alt="meditating person">
+      <button type="reset" id="clear" class="hidden"> Start Fresh </button>
+    </section>
+  </main>
+
+  <script type="text/javascript" src="main.js"></script>
+</body>
+
 </html>
