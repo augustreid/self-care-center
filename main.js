@@ -1,7 +1,9 @@
 //query selectors
 var messageButton = document.querySelector(".receive-message");
 var image = document.querySelector("img");
-
+var messageBox = document.querySelector("p");
+var affRadio = document.getElementById("affirmation");
+var mantraRadio = document.getElementById("mantra");
 
 // event listeners
 messageButton.addEventListener("click", showMessage);
@@ -12,12 +14,17 @@ messageButton.addEventListener("click", showMessage);
 // functions
 function showMessage() {
   image.classList.add("hidden");
-}
-
-
-
-function getRandomIndex(messageType) {
-  return Math.floor(Math.random() * messageType.length);
+  messageBox.classList.remove("hidden");
+  if (affRadio.checked) {
+    var randomAffirmation = affirmations[Math.floor(Math.random() * affirmations.length)];
+      messageBox.innerText = randomAffirmation;
+  }  else if (mantraRadio.checked) {
+      var randomMantra = mantras[Math.floor(Math.random() * mantras.length)];
+        messageBox.innerText = randomMantra;
+        messageBox.classList.remove("hidden");
+    } else {
+      messageBox.innerText = "Please choose a message type!";
+    };
 };
 
 
