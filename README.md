@@ -1,24 +1,41 @@
-# Self Care Center
-## Overview
-How can I care for myself? One way is with affirmations and mantras!
-Affirmations are thoughts of positive self-empowerment, meant to assert your self-worth.
-Mantras are repetive phrases that are repeated again and again during mindfulness practices. Your challenge is to build an app that helps users remind themselves of their inherent value!
+# 2108 Solo Project "Self-Care-Center"
 
-This Solo Challenge gives students and instructors the opportunity to get a pulse on where you are with the foundational concepts of Module 1 curriculum. Students should use this as an opportunity to challenge themselves and work completely independently. Google can (and probably should!) be used, but any other code base should not be referenced. Instructors will be able to use your work, both completion of functionality and code quality, to determine where you stand and if you are behind for this point in the module, provide supports to intervene.
+## Abstract
+The goal of this project was to create a simple app to randomly display
+soothing affirmations and mantras. I was provided a comp to recreate, as well
+as an image and the specific colors. Everything else was created from scratch.
 
-The spec for this project can be found [here](https://frontend.turing.io/projects/module-1/self-care-center.html). 
+## Technologies
+- Javascript
+- HTML
+- CSS
+- Atom
 
-## Learning Goals
+## Project Spec
+Instructions and rubric for this project can be found [HERE.](https://frontend.turing.edu/projects/module-1/self-care-center.html)
 
-- Gain experience building an application that utilizes HTML, CSS and JavaScript
-- Write HTML and CSS to match a provided comp
-- Understand how to listen to and respond to user events
-- Individualize your programming skill set
+## Creator
+[August Reid](https://github.com/augustreid)
 
-## Setup
+## User Instructions
+The deployed project can be found [HERE.](https://augustreid.github.io/self-care-center/)
 
-- Fork this project to your own Github account
-- Clone the repository to your local machine
-- `cd` into the project
-- Read this README thoroughly, then begin working!
+The app loads with a `login page` where the user can enter their name and **click**
+the `Teach Me Serenity` button. If the user does not enter anything, they will receive
+an alert message.
 
+<img width="1275" alt="Screen Shot 2021-09-12 at 3 11 16 PM" src="https://user-images.githubusercontent.com/87552193/133003370-07aaeda7-8c71-4cd7-baa7-0d50c99bfcb5.png">
+
+The user will then see the `main page`, which has a personalized greeting and
+a `Receive Message` button to display either an affirmation or a mantra.
+If user does not select a message type, the displayed message will ask them to
+choose a message type.
+
+<img width="1089" alt="Screen Shot 2021-09-12 at 3 12 36 PM" src="https://user-images.githubusercontent.com/87552193/133003444-b4772180-e40c-4633-97f3-f411bfcadd23.png">
+
+The meditating person/bell image will be replaced by either an affirmation or a mantra,
+randomly selected from a list. The user can continue clicking the `Receive Message` button
+to see new messages. There is also a `Fresh Start` button, which clears a message from
+the text box and displays the meditation image again.
+
+<img width="1089" alt="Screen Shot 2021-09-12 at 3 13 30 PM" src="https://user-images.githubusercontent.com/87552193/133003540-95de3392-c203-40f1-b4ce-aa33e1deaf89.png">
